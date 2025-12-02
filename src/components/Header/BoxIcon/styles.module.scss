@@ -1,0 +1,14 @@
+.iconImg{
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.icon{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(11%) saturate(7451%) hue-rotate(292deg) brightness(112%) contrast(107%);
+}

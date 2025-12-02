@@ -1,0 +1,62 @@
+.boxList{
+    display: flex;
+    max-width: 1260px;
+    min-height: 440px;
+    .boxHeading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 49.048%;
+    }
+
+    .boxProduct{
+        width: 50.952%;
+        padding: 15px;
+    }
+    .boxContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .button{
+            margin-top: 20px;
+            display: flex;
+            a{
+                text-decoration: none;
+                background-color: #333;
+                font-family: "Roboto Mono", Sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                fill: #FFF;
+                color: #FFF;
+                border-style: solid;
+                border-width: 1px 1px 1px 1px;
+                border-color: #333;
+                border-radius: 3px 3px 3px 3px;
+                padding: 11px 50px 11px 50px;
+                transition: all ease-in-out 0.3s;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+
+        }
+        .title{
+            font-size: 28px;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 40px;
+            color: #222;
+            letter-spacing: 2px;
+        }
+    }
+}
+.boxHeading{
+    background-image: url('../../assets/imgs/img/photo-of-man-wearing-white-hoodie-5474310.jpeg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    height: 408px;
+   
+}

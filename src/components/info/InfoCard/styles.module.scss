@@ -1,0 +1,33 @@
+@import '../../../assets//styles/variables.module';
+.boxContent{
+     display: flex;
+     padding: 15px;
+     gap:15px;
+     width: 280px;
+    .Icon{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+       filter: brightness(0) saturate(100%) invert(45%) sepia(17%) saturate(21%) hue-rotate(49deg) brightness(91%) contrast(79%);
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        .title{
+            font-size: 17px;
+            color: $white_color;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 22px;
+            margin-bottom: 15px
+        }
+        .text{
+            font-size: 16px;
+            font-weight: 300;
+            color: $white_color;
+            letter-spacing: 1px;
+            line-height: 21px;
+        }
+    }
+
+}

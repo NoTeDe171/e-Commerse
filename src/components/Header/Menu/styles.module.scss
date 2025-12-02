@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables.module';
+.menuContent{
+    font-size: 15px;
+    color:$primary_color;
+    font-weight: 500;
+}
+
+.menuLi{
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.menu::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    transform: scale(0);
+    transform-origin: right;
+    background-color: $primary_color;
+    transition: all ease-in-out 0.15s;
+}
+
+.menu:hover::after{
+     transform: scale(1);
+}

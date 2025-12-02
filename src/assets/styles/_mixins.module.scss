@@ -1,0 +1,8 @@
+@import './variables.module';
+
+@mixin btn($w:10px, $h, $rd,$bg:var($white_color)){
+    width:$w;
+    height: $h;
+    background-color: $bg;
+    border-radius: $rd;
+}

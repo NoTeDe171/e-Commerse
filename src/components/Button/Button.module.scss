@@ -1,0 +1,8 @@
+@import '../../assets/styles/mixins.module';
+
+
+.btn{
+
+    @include btn(40px,40px,10px)
+
+}

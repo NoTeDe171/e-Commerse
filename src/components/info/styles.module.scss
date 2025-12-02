@@ -1,0 +1,9 @@
+@import '../../assets/styles/variables.module';
+.container{
+    padding: 20px 55px;
+    background: $primary_color;
+    display: flex;
+    margin-top: -75px;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+@import '../../../assets//styles/variables.module';
+
+.boxTime{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.objTime{
+    background:$white_color ;
+    display: flex;
+    gap:10px;
+    min-height: 41px;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px ;
+    .valueTime{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1;
+        color:$time_color;
+    }
+    .labelTime{
+        color: #888;
+        font-family: "Roboto Mono", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
