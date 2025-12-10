@@ -6,8 +6,29 @@ import Logo from "../../assets/imgs/img/Logo-retina.webp";
 import loadIcon from "../../assets/imgs/svgs/reloadIcon.svg";
 import heartIcon from "../../assets/imgs/svgs/heart.svg";
 import shopIcon from "../../assets/imgs/svgs/shopIcon.svg";
+import { useContext, useEffect, useState } from "react";
+import { SideBarContext } from "../../contexts/SideBar";
 
 function Header() {
+  const [fixedHeader, setfixedHeader] = useState(false)
+
+  const {isOpen, setisOpen} = useContext(SideBarContext)
+
+  const ScrollPosition = () => {
+     const locate = window.pageYOffset;
+     setfixedHeader(locate >= 88 ? true : false)
+  }
+
+ 
+
+  useEffect(() => {
+    window.addEventListener('scroll', ScrollPosition )
+    return () => {
+      window.removeEventListener('scroll', ScrollPosition)
+    }
+  }, [])
+
+
   const {
     boxIcon,
     box,
@@ -20,11 +41,12 @@ function Header() {
     boxLogo,
     boxIconRight,
     container,
+    fixed
   } = styles;
 
   return (
     <>
-      <div className={container}>
+      <div className={`${container} ${fixedHeader? fixed : ''}`}>
         <div className={header}>
           <div className={boxLeft}>
             <div className={box}>
@@ -59,7 +81,7 @@ function Header() {
                 {dataMenu.slice(3, dataMenu.length).map((item, index) => {
                   return (
                     <div key={index}>
-                      <Menu content={item.content} href={item.href} />
+                      <Menu content={item.content} href={item.href} setisOpen={setisOpen}  isOpen={isOpen} trigger={item.content === "Sign In" ? true : false} />
                     </div>
                   );
                 })}

@@ -1,8 +1,10 @@
 import styles from "./styles.module.scss";
 import MainLayOut from "../Layout/Layout";
 import TimeCountDown from "./TimeCountDown/TimeCountDown";
-function HeadingList() {
+import ProductItem from '../ProductItem/ProductItem'
+function HeadingList({data}) {
   const { boxList, boxHeading, boxProduct, boxContent, title, button } = styles;
+
   return (
     <>
       <MainLayOut>
@@ -19,8 +21,13 @@ function HeadingList() {
             </div>
           </div>
           <div className={boxProduct}>
-            <div> box 1</div>
-            <div> box 2</div>
+            {
+              data.map((item,index) => {
+                return (
+                  <ProductItem key ={index} name={item.name} price={item.price} img1={item.images[0]} img2={item.images[1]}/>  
+              )
+              })
+            }
           </div>
         </div>
       </MainLayOut>

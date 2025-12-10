@@ -2,9 +2,10 @@
 @import '../../assets/styles/variables.module';
 .container{
     display: flex;
+    transition: all ease-in-out 0.3s;
     position: absolute;
     left: 0;
-    top: 0;
+    top:0;
     right: 0;
     justify-content: center;
     align-items: center;
@@ -70,3 +71,12 @@ align-items: center;
     gap: 18px;
 margin-left: 10px;
 }
+
+.container.fixed{
+    position: fixed;
+    background-color: $white_color;
+    top: -73px;   
+    transform: translateY(73px);
+    transition: transform 0.4s;
+}
+

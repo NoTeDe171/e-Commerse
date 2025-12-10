@@ -1,23 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Footer from './components/Footer/Footer'
-
-import Button from './components/Button/Button'
-import HomePage from './components/HomePage/HomePage'
-
-
-
+import HomePage from "./components/HomePage/HomePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import routers from "./routers/routers";
+import SideBar from "./components/Sidebar/Sidebar";
+import { SideBarProvider } from "./contexts/SideBar";
 function App() {
-  
-
   return (
     <>
-     
-      <HomePage/>
-       
+   <SideBarProvider>
+     <SideBar/>
+    <BrowserRouter>
+      <Routes>
+        {routers.map((item, index) => {
+          return (
+            <Route key={index} path={item.path} element={<item.Component />} />
+          );
+        })}
+      </Routes>
+    </BrowserRouter>
+   </SideBarProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

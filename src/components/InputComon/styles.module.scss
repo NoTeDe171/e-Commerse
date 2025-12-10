@@ -1,0 +1,26 @@
+@import '../../assets//styles//variables.module';
+.boxInput{
+    margin-top: 20px;
+    position: relative;
+}
+.input{
+    width: 100%;
+    padding-left: 17px;
+    padding-right: 17px;
+    height: 36px;
+    border: 1px solid $line_head ;
+}
+.title{
+    font-size: $time_color;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.checkpass{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 30px;
+    top: 29px;
+
+}
